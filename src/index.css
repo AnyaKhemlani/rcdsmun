@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* Set default font and text color for entire site */
+  body {
+    @apply font-sans text-navy;
+  }
+  
+  /* You can also set defaults for headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-navy;
+  }
+}
