@@ -27,20 +27,23 @@ function Navbar({ currentPage, setCurrentPage }) {
               onMouseLeave={() => setShowConferenceDropdown(false)}
             >
               <button 
-                className={`${currentPage === 'conference' || currentPage === 'registration' ? 'text-navy' : 'text-gray-700'} hover:text-navy transition`}
+                onClick={() => setCurrentPage('conference')}
+                className={`${currentPage === 'conference' ? 'text-navy' : 'text-gray-700'} hover:text-navy transition`}
               >
                 Conference
               </button>
-              {showConferenceDropdown && (
+              {/* {showConferenceDropdown && (
                 <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 w-48">
-                  <button 
-                    onClick={() => setCurrentPage('registration')}
+                  <a 
+                    href="https://docs.google.com/forms/YOUR_FORM_ID_HERE"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-navy"
                   >
                     Registration
-                  </button>
+                  </a>
                 </div>
-              )}
+              )} */}
             </div>
             <button 
               onClick={() => setCurrentPage('about')}

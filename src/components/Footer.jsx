@@ -2,35 +2,29 @@ function Footer({ setCurrentPage }) {
     return (
       <footer className="bg-navy text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
-            {/* Contact Information */}
+          {/* <div className="grid md:grid-cols-3 gap-8 text-center md:text-left"> */}
+          <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <h3 className="text-xl font-bold mb-3">Contact Us</h3>
               <p className="mb-2">
                 <a href="mailto:rcdsmun@example.com" className="hover:underline">
-                  rcdsmun@example.com
+                  rcdsmun@gmail.com
                 </a>
               </p>
-              <p>Phone: (555) 123-4567</p>
+              <p>Phone: (123) 456-789</p>
             </div>
-  
-            {/* Registration Link */}
             <div>
-              <h3 className="text-xl font-bold mb-3">Join RCDSMUNC I</h3>
-              <button 
-                onClick={() => setCurrentPage('registration')}
-                className="bg-white text-navy px-6 py-2 rounded-lg font-semibold hover:bg-blue-100 transition"
+              <a 
+                href="https://docs.google.com/forms/YOUR_FORM_ID_HERE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white text-navy px-6 py-2 rounded-lg font-semibold hover:bg-blue-100 transition"
               >
-                Register Now
-              </button>
+                Register for RCDSMUNC I
+              </a>
             </div>
-  
-            {/* Meeting Information */}
             <div>
-              <h3 className="text-xl font-bold mb-3">Meetings</h3>
-              <p className="mb-1"><strong>When:</strong> Wednesdays, 3:30 PM</p>
-              <p className="mb-1"><strong>Where:</strong> Room 204</p>
-              <p><strong>Next Meeting:</strong> January 15, 2025</p>
+              <p className="mb-1"><strong>When:</strong> Tuesdays and Fridays, 10:50 AM</p>
+              <p className="mb-1"><strong>Where:</strong> Pinkham Building - Memorial Hall</p>
             </div>
           </div>
           

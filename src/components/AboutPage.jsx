@@ -8,25 +8,25 @@ function AboutPage() {
         bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Passionate about international relations and debate."
       },
       {
-        name: "Co-President 2",
+        name: "Kevin Neilinger",
         role: "Co-President",
-        email: "coprez2@example.com",
-        image: "https://via.placeholder.com/300",
-        bio: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dedicated to creating meaningful diplomatic experiences."
+        email: "kevin_neilinger@ryecountryday.org",
+        image: "/media/president_kevin.png",
+        bio: "I’m Kevin Neilinger, and I am really excited to be your Secretary-General. I have been doing MUN since eighth grade, and the club has been the highlight of my high school experience so far. When I’m not doing in MUN, I enjoy swimming and hanging out with my friends and family. My favorite thing about MUN is making new friends, and I hope that you can connect with many new people at RCDS MHNC! If you have any questions about RCDSMUNC or anything related, please feel free to email me."
       },
       {
-        name: "Vice President",
+        name: "Lillian Pereira",
         role: "Vice President",
-        email: "viceprez@example.com",
-        image: "https://via.placeholder.com/300",
+        email: "lillian_pereira@ryecountryday.org",
+        image: "/media/vice_lillian.png",
         bio: "Ut enim ad minim veniam, quis nostrud exercitation. Committed to fostering debate skills and global awareness."
       },
       {
-        name: "Faculty Advisor",
+        name: "Daniel Murray",
         role: "Faculty Advisor",
-        email: "advisor@example.com",
-        image: "https://via.placeholder.com/300",
-        bio: "Duis aute irure dolor in reprehenderit in voluptate. Supporting students in their Model UN journey for over 10 years."
+        email: "daniel_murray@ryecountryday.org",
+        image: "/media/advisor_murray.png",
+        bio: "Duis aute irure dolor in reprehenderit in voluptate. Supporting students in their Model UN journey for over ___ years."
       }
     ]
   
