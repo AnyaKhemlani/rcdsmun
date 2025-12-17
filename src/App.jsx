@@ -1,29 +1,35 @@
 import { useState } from 'react'
 import Navbar from './components/NavBar'
+import Footer from './components/Footer'
 import HomePage from './components/HomePage'
-import TeamsPage from './components/TeamsPage'
+import AboutPage from './components/AboutPage'
+import ConferencePage from './components/ConferencePage'
+// import RegistrationPage from './components/RegistrationPage'
+import CommitteePage from './components/CommitteePage'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
 
+  const renderPage = () => {
+    if (currentPage === 'home') return <HomePage setCurrentPage={setCurrentPage} />
+    if (currentPage === 'about') return <AboutPage />
+    if (currentPage === 'conference') return <ConferencePage />
+    if (currentPage === 'registration') return <RegistrationPage />
+    if (currentPage.startsWith('committee-')) return <CommitteePage committeeId={currentPage} />
+    
+    return <HomePage setCurrentPage={setCurrentPage} />
+  }
+  
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
 
       {/* Page Content */}
-      <div className="pt-16">
-        {currentPage === 'home' && <HomePage />}
-        {currentPage === 'teams' && <TeamsPage />}
-        {currentPage === 'events' && <div className="p-8">Events page coming soon...</div>}
-        {currentPage === 'join' && <div className="p-8">Join page coming soon...</div>}
+      <div className="pt-16 flex-grow">
+        {renderPage()}
       </div>
 
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p>&copy; 2024 RCDS Model UN Club. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer setCurrentPage={setCurrentPage} />
     </div>
   )
 }

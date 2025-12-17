@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Times New Roman"', 'Times', 'serif'],
+        sans: ['"Playfair Display"', 'serif'],
       },
       colors: {
         navy: '#202e50',
