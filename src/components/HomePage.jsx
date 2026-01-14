@@ -1,43 +1,89 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function HomePage({ setCurrentPage }) {
   const [showPopup, setShowPopup] = useState(false)
+  const [currentTopicIndex, setCurrentTopicIndex] = useState(0)
+  const [displayedText, setDisplayedText] = useState('')
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  const topics = [
+    "Ethics of Artificial Intelligence in Business",
+    "Counterterrorism in Central America",
+    "Coral Bleaching in the Great Barrier Reef",
+    "The Equal Pay Act",
+    "Escalation in the South China Sea",
+    "The Cold War & McCarthyism"
+  ]
+
+  useEffect(() => {
+    const currentTopic = topics[currentTopicIndex]
+    const typingSpeed = isDeleting ? 50 : 100
+    
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing
+        if (displayedText.length < currentTopic.length) {
+          setDisplayedText(currentTopic.slice(0, displayedText.length + 1))
+        } else {
+          // Finished typing, wait then start deleting
+          setTimeout(() => setIsDeleting(true), 2000)
+        }
+      } else {
+        // Deleting
+        if (displayedText.length > 0) {
+          setDisplayedText(displayedText.slice(0, -1))
+        } else {
+          // Finished deleting, move to next topic
+          setIsDeleting(false)
+          setCurrentTopicIndex((prev) => (prev + 1) % topics.length)
+        }
+      }
+    }, typingSpeed)
+
+    return () => clearTimeout(timeout)
+  }, [displayedText, isDeleting, currentTopicIndex])
 
   const committees = {
     "General Assembly": [
       { 
         name: "Economic and Financial Affairs Council (ECOFIN)", 
         chairs: "Stephen Pinder and Felipe Quintero Ochoa",
-        topic: "Ethics of Artificial Intelligence in Business"
+        topic: "Ethics of Artificial Intelligence in Business",
+        banner: "/media/ECOFIN.jpeg"
       },
       { 
         name: "Social, Humanitarian, and Cultural Committee (SOCHUM)", 
         chairs: "Jenny Xu and Bennett Klurfeld",
-        topic: "Counterterrorism in Central America"
+        topic: "Counterterrorism in Central America",
+        banner: "/media/SOCHUM.jpeg"
       }
     ],
     "Specialized Committees": [
       { 
         name: "United Nations Environment Programme (UNEP)", 
         chairs: "Ellora Shah and Chase Tucker",
-        topic: "Coral Bleaching in the Great Barrier Reef"
+        topic: "Coral Bleaching in the Great Barrier Reef",
+        banner: "/media/UNEP.jpeg"
       },
       { 
         name: "United Nations Entity for Gender Equality and the Empowerment of Women (UN Women)", 
         chairs: "Karter de la Fuente and Val He",
-        topic: "The Equal Pay Act"
+        topic: "The Equal Pay Act",
+        banner: "/media/UNWOMEN.jpeg"
       }
     ],
     "Crisis Committees": [
       { 
         name: "Association of Southeast Asian Nations + (ASEAN+)", 
         chairs: "Emma Hepworth and Grant Dinger",
-        topic: "Escalation in the South China Sea"
+        topic: "Escalation in the South China Sea",
+        banner: "/media/ASEAN+.jpeg"
       },
       { 
         name: "House Un-American Activities Committee (HUAC)", 
         chairs: "Xavier Reilly and Alison Gipstein",
-        topic: "The Cold War & McCarthyism"
+        topic: "The Cold War & McCarthyism",
+        banner: "/media/HUAC.jpeg"
       }
     ]
   }
@@ -60,26 +106,34 @@ function HomePage({ setCurrentPage }) {
         {/* White overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-white opacity-40"></div>
 
-        {/* Club Crest */}
-        <div className="relative z-10 flex flex-col items-center">
+        {/* Club Crest - moved up */}
+        <div className="relative z-10 flex flex-col items-center -mt-20">
           <img 
             src="/media/DarkBlue.png" 
             alt="RCDS Model UN Crest" 
-            className="w-64 h-64 md:w-96 md:h-96 object-contain drop-shadow-2xl"
+            className="w-48 h-48 md:w-72 md:h-72 object-contain drop-shadow-2xl"
           />
+          
+          {/* Typewriter Text */}
+          <div className="mt-8 text-center px-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-navy">
+              Investigating: <span className="text-navy">{displayedText}</span>
+              <span className="animate-pulse">|</span>
+            </h2>
+          </div>
         </div>
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 z-10 text-navy text-xl font-semibold animate-bounce">
-          RCDSMUNC Information Below
+          RCDSMUNC I Information Below
         </div>
       </div>
 
-      {/* Letter from Co-Presidents */}
+      {/* Letter from the Secretariat */}
       <section className="bg-blue-100 py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-navy mb-8 text-center">
-            Letter from the Co-Presidents
+            Letter from the Secretariat
           </h2>
           <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
             <p className="text-navy mb-4 leading-relaxed">
@@ -127,15 +181,22 @@ function HomePage({ setCurrentPage }) {
                     <button
                       key={idx}
                       onClick={() => setShowPopup(true)}
-                      className="w-full bg-blue-50 hover:bg-blue-100 rounded-lg p-6 transition-all hover:shadow-lg text-left"
+                      className="w-full bg-blue-50 hover:bg-blue-100 rounded-lg overflow-hidden transition-all hover:shadow-lg text-left"
                     >
-                      <h4 className="text-navy font-bold text-lg mb-2">{committee.name}</h4>
-                      <p className="text-navy mb-1">
-                        <span className="font-semibold">Chairs:</span> {committee.chairs}
-                      </p>
-                      <p className="text-navy">
-                        <span className="font-semibold">Topic:</span> {committee.topic}
-                      </p>
+                      <img 
+                        src={committee.banner} 
+                        alt={`${committee.name} banner`}
+                        className="w-full h-32 object-cover"
+                      />
+                      <div className="p-6">
+                        <h4 className="text-navy font-bold text-lg mb-2">{committee.name}</h4>
+                        <p className="text-navy mb-1">
+                          <span className="font-semibold">Chairs:</span> {committee.chairs}
+                        </p>
+                        <p className="text-navy">
+                          <span className="font-semibold">Topic:</span> {committee.topic}
+                        </p>
+                      </div>
                     </button>
                   ))}
                 </div>
