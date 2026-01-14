@@ -25,12 +25,19 @@ function ConferencePage() {
               <h2 className="text-3xl font-bold text-navy mb-4">Schedule</h2>
               <div className="text-navy space-y-3">
                 <p><strong>Date:</strong> March 15-16, 2025</p>
-                <p><strong>Check-in:</strong> 8:00 AM</p>
-                <p><strong>Opening Ceremony:</strong> 9:00 AM</p>
-                <p><strong>Committee Sessions:</strong> 10:00 AM - 5:00 PM</p>
-                <p><strong>Closing Ceremony:</strong> 5:30 PM</p>
+                <p><strong>Registration:</strong> 8:00am - 8:45am</p>
+                <p><strong>Opening Ceremonies:</strong> 9:00am - 9:45am </p>
+                <p><strong>Committee Session I:</strong> 10:00am - 12:00pm </p>
+                <p><strong>Lunch (staggered):</strong> 12:00pm - 2:00pm </p>
+                <p><strong>Opening Ceremonies:</strong> 9:00am - 9:45am </p>
+                <p><strong>Opening Ceremonies:</strong> 9:00am - 9:45am </p>
+                <p><strong>Opening Ceremonies:</strong> 9:00am - 9:45am </p>
               </div>
             </div>
+
+Committee Session II: 2:00pm - 4:00pm 
+Committee Session III: 4:00pm - 5:00pm 
+Closing Ceremonies 5:15pm - 5:45pm
   
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h2 className="text-3xl font-bold text-navy mb-4">Logistics</h2>
