@@ -33,7 +33,7 @@ function Navbar({ currentPage, setCurrentPage }) {
               >
                 Conference
               </button>
-              {showConferenceDropdown && (
+              {/* {showConferenceDropdown && (
                 <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 w-48">
                   <a 
                     href="https://docs.google.com/forms/YOUR_FORM_ID_HERE"
@@ -44,7 +44,7 @@ function Navbar({ currentPage, setCurrentPage }) {
                     Registration
                   </a>
                 </div>
-              )}
+              )} */}
             </div>
             <button 
               onClick={() => setCurrentPage('about')}
