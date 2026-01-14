@@ -14,7 +14,7 @@ function Footer({ setCurrentPage }) {
             </div>
             <div>
               <a 
-                href="https://docs.google.com/forms/YOUR_FORM_ID_HERE"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdzljSLalN-P1wMapzJXvlhlSpNnKOP3V2mqF1p9VdVB0wd6g/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-white text-navy px-6 py-2 rounded-lg font-semibold hover:bg-blue-100 transition"
