@@ -10,7 +10,6 @@ function Footer({ setCurrentPage }) {
                   rcdsmun@gmail.com
                 </a>
               </p>
-              <p>Phone: (123) 456-789</p>
             </div>
             <div>
               <a 
@@ -29,7 +28,7 @@ function Footer({ setCurrentPage }) {
           </div>
           
           <div className="mt-8 pt-8 border-t border-white/20 text-center">
-            <p>&copy; 2024 RCDSMUN. All rights reserved.</p>
+            <p>&copy; 2026 RCDSMUN. All rights reserved.</p>
           </div>
         </div>
       </footer>
