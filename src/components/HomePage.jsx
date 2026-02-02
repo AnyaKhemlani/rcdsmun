@@ -74,9 +74,9 @@ function HomePage({ setCurrentPage }) {
     ],
     "Crisis Committees": [
       { 
-        name: "Tiananmen Square", 
+        name: "Association of Southeast Asian Nations + (ASEAN+)", 
         chairs: "Emma Hepworth and Grant Dinger",
-        topic: "Escalation in the South China Sea",
+        topic: "Tiananmen Square",
         banner: "/media/ASEAN+.jpeg"
       },
       { 
