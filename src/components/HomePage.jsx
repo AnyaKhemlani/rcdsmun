@@ -77,7 +77,7 @@ function HomePage({ setCurrentPage }) {
         name: "Historical Crisis Committee", 
         chairs: "Emma Hepworth and Grant Dinger",
         topic: "Tiananmen Square",
-        banner: "/media/ASEAN+.jpeg"
+        banner: "/media/historical.jpeg"
       },
       { 
         name: "House Un-American Activities Committee (HUAC)", 
