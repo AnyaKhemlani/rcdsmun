@@ -11,7 +11,7 @@ function HomePage({ setCurrentPage }) {
     "Counterterrorism in Central America",
     "Coral Bleaching in the Great Barrier Reef",
     "The Equal Pay Act",
-    "Escalation in the South China Sea",
+    "Tiananmen Square ",
     "The Cold War & McCarthyism"
   ]
 
