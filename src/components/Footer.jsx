@@ -13,7 +13,7 @@ function Footer({ setCurrentPage }) {
             </div>
             <div>
               <a 
-                href="forms.gle/8RFvoFFtPWVgd6Q9A"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdsZUp2lZ0ptuqnbZn-waabMwKgbVktEaUgwppxnl5Spf6xyA/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-white text-navy px-6 py-2 rounded-lg font-semibold hover:bg-blue-100 transition"
