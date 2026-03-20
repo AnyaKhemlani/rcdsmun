@@ -10,7 +10,7 @@ function ConferencePage() {
               Join us for an exciting Model UN conference experience!
             </p>
             <a 
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdzljSLalN-P1wMapzJXvlhlSpNnKOP3V2mqF1p9VdVB0wd6g/viewform "
+              href="forms.gle/8RFvoFFtPWVgd6Q9A"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-navy px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-100 transition"
