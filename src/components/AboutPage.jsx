@@ -14,7 +14,7 @@ function AboutPage() {
       email: "kevin_neilinger@ryecountryday.org",
       image: "/media/president_kevin.png",
       awards: "Verbal Commendation Awarded for role of Guatemala in HoMMUNC’s SOCHUM Committee (2025)",
-      bio: "Hi! I’m Kevin Neilinger and I am really excited to be your Secretary-General. I have been doing MUN since eighth grade, and the club has been the highlight of my high school experience so far. When I’m not doing in MUN, I enjoy swimming and hanging out with my friends and family. My favorite thing about MUN is making new friends, and I hope that you can connect with many new people at RCDS MHNC! Thank you so much. If you have any questions about RCDSMUNC or anything related, please feel free to email me. See you in December!"
+      bio: "Hi! I’m Kevin Neilinger and I am really excited to be your Secretary-General. I have been doing MUN since eighth grade, and the club has been the highlight of my high school experience so far. When I’m not in MUN, I enjoy swimming and hanging out with my friends and family. My favorite thing about MUN is making new friends, and I hope that you can connect with many new people at RCDSMUNC! Thank you so much. If you have any questions about RCDSMUNC or anything related, please feel free to email me. See you in April!"
     },
     {
       name: "Lillian Pereira",
@@ -29,7 +29,7 @@ function AboutPage() {
   const stats = [
     { number: "4", label: "Conferences" },
     { number: "103", label: "Members" },
-    { number: "3", label: "Major Awards Won in 2025" }
+    { number: "4", label: "Major Awards Won in 2025/2026" }
   ]
 
   return (

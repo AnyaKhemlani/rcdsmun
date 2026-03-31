@@ -39,7 +39,7 @@ function ConferencePage() {
               <h2 className="text-3xl font-bold text-navy mb-4">Logistics</h2>
               <div className="text-navy space-y-3">
                 <p><strong>Date:</strong> April 18th, 2026</p>
-                <p><strong>Location:</strong> 3 Cedar St; Rye, NY 10580</p>
+                <p><strong>Location:</strong> 3 Cedar St, Rye, NY 10580</p>
                 <p><strong>Registration Fee:</strong> $40 per delegate</p>
                 <p><strong>Lunch:</strong> Provided</p>
                 <p><strong>Dress Code:</strong> Western Business Attire</p>
@@ -60,7 +60,7 @@ function ConferencePage() {
             <p className="text-navy leading-relaxed mb-4"><strong>AI Use Policy:</strong> Please note that there is a zero tolerance policy for Artificial Intelligence use at RCDSMUNC I for any written work, including but not limited to position papers, working documents, and resolutions. If a student’s work is flagged for AI use or plagiarism, the student will be immediately disqualified from earning a delegation award, and their faculty advisor will be notified. </p>
             
             <p className="text-navy leading-relaxed">
-              For questions or more information, please contact us at rcdsmun@gmail.com (and cc our faculty advisor, daniel_murray@ryecountryday.org)
+              For questions or more information, please contact us at zara_khemlani@ryecountryday.org and kevin_neilinger@ryecountryday.org (and cc our faculty advisor, daniel_murray@ryecountryday.org)
             </p>
           </div>
         </div>

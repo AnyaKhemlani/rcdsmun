@@ -53,7 +53,7 @@ function HomePage({ setCurrentPage }) {
       },
       { 
         name: "Social, Humanitarian, and Cultural Committee (SOCHUM)", 
-        chairs: "Jenny Xu and Bennett Klurfeld",
+        chairs: "Adrian Lallemand and Bennett Klurfeld",
         topic: "Counterterrorism in Central America",
         banner: "/media/SOCHUM.jpeg"
       }

@@ -6,8 +6,13 @@ function Footer({ setCurrentPage }) {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
               <p className="mb-2">
-                <a href="mailto:rcdsmun@example.com" className="hover:underline">
-                  rcdsmun@gmail.com
+                <a href="mailto:zara_khemlani@ryecountryday.org " className="hover:underline">
+                  zara_khemlani@ryecountryday.org
+                </a>
+              </p>
+              <p className="mb-2">
+                <a href="mailto:kevin_neilinger@ryecountryday.org" className="hover:underline">
+                  kevin_neilinger@ryecountryday.org
                 </a>
               </p>
             </div>
