@@ -55,7 +55,7 @@ function ConferencePage() {
               RCDSMUNC I will bring together delegates from across the region to engage in meaningful diplomatic discussions and negotiations. This conference offers an excellent opportunity for both novice and experienced delegates to develop their skills.
             </p>
             <p className="text-navy leading-relaxed mb-4">
-            <strong>Position Papers: </strong>Position papers are required to be eligible for an award at RCDSMUNC I. Please limit your paper to no more than two pages including a bibliography (Times New Roman size 12, 1.5 spacing). Position papers are due on Sunday, April 12, 2026 at 11:59pm. Please email your position paper to both of the chairs of your committee as a PDF. As a reminder, AI use is strictly prohibited in all writings.
+            <strong>Position Papers: </strong>Position papers are required to be eligible for an award at RCDSMUNC I. Please limit your paper to no more than two pages including a bibliography (Times New Roman size 12, 1.5 spacing). Please email your position paper to both of the chairs of your committee as a PDF. As a reminder, AI use is strictly prohibited in all writings.
             </p>
             <p className="text-navy leading-relaxed mb-4"><strong>AI Use Policy:</strong> Please note that there is a zero tolerance policy for Artificial Intelligence use at RCDSMUNC I for any written work, including but not limited to position papers, working documents, and resolutions. If a student’s work is flagged for AI use or plagiarism, the student will be immediately disqualified from earning a delegation award, and their faculty advisor will be notified. </p>
             

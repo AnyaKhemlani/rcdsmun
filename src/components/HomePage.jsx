@@ -2,16 +2,17 @@ import { useState, useEffect } from 'react'
 
 function HomePage({ setCurrentPage }) {
   const [showPopup, setShowPopup] = useState(false)
+  const [selectedCommittee, setSelectedCommittee] = useState(null)
   const [currentTopicIndex, setCurrentTopicIndex] = useState(0)
   const [displayedText, setDisplayedText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
 
   const topics = [
     "Ethics of Artificial Intelligence in Business",
-    "Counterterrorism in Central America",
-    "Coral Bleaching in the Great Barrier Reef",
+    // "Counterterrorism in Central America",
+    // "Coral Bleaching in the Great Barrier Reef",
     "The Equal Pay Act",
-    "Tiananmen Square ",
+    // "Tiananmen Square ",
     "The Cold War & McCarthyism"
   ]
 
@@ -47,45 +48,35 @@ function HomePage({ setCurrentPage }) {
     "General Assembly": [
       { 
         name: "Economic and Financial Affairs Council (ECOFIN)", 
-        chairs: "Stephen Pinder and Felipe Quintero Ochoa",
+        chairs: "Stephen Pinder, Felipe Quintero Ochoa, Adrian Lallemand, and Bennett Klurfeld",
         topic: "Ethics of Artificial Intelligence in Business",
-        banner: "/media/ECOFIN.jpeg"
-      },
-      { 
-        name: "Social, Humanitarian, and Cultural Committee (SOCHUM)", 
-        chairs: "Adrian Lallemand and Bennett Klurfeld",
-        topic: "Counterterrorism in Central America",
-        banner: "/media/SOCHUM.jpeg"
+        banner: "/media/ECOFIN.jpeg",
+        guide: "/media/background_guides/ECOFIN_background_guide.pdf"
       }
     ],
-    "Specialized Committees": [
-      { 
-        name: "United Nations Environment Programme (UNEP)", 
-        chairs: "Ellora Shah and Chase Tucker",
-        topic: "Coral Bleaching in the Great Barrier Reef",
-        banner: "/media/UNEP.jpeg"
-      },
+    "Specialized Committee": [
       { 
         name: "United Nations Entity for Gender Equality and the Empowerment of Women (UN Women)", 
-        chairs: "Karter de la Fuente and Val He",
+        chairs: "Karter de la Fuente, Val He, Ellora Shah, and Chase Tucker",
         topic: "The Equal Pay Act",
-        banner: "/media/UNWOMEN.jpeg"
+        banner: "/media/UNWOMEN.jpeg",
+        guide: "/media/background_guides/UNWomen_background_guide.pdf"
       }
     ],
-    "Crisis Committees": [
-      { 
-        name: "Historical Crisis Committee", 
-        chairs: "Emma Hepworth and Grant Dinger",
-        topic: "Tiananmen Square",
-        banner: "/media/historical.jpeg"
-      },
+    "Crisis Committee": [
       { 
         name: "House Un-American Activities Committee (HUAC)", 
-        chairs: "Xavier Reilly and Alison Gipstein",
+        chairs: "Xavier Reilly, Alison Gipstein, Emma Hepworth, and Grant Dinger",
         topic: "The Cold War & McCarthyism",
-        banner: "/media/HUAC.jpeg"
+        banner: "/media/HUAC.jpeg",
+        guide: "/media/background_guides/HUAC_background_guide.pdf"
       }
     ]
+  }
+
+  const handleCommitteeClick = (committee) => {
+    setSelectedCommittee(committee)
+    setShowPopup(true)
   }
 
   return (
@@ -146,7 +137,7 @@ function HomePage({ setCurrentPage }) {
               The Secretariat, along with our faculty advisor, Mr. Murray, have been working diligently over the past year to coordinate our first conference. Our goal for RCDSMUNC I is to inspire delegates to collaborate while developing their knowledge on impactful global problems. 
             </p>
             <p className="text-navy mb-4 leading-relaxed">
-              Our six committees cover a variety of topics, including the ethics of AI in business, counterterrorism in Central America, coral bleaching in the Great Barrier Reef, the Equal Pay Act, escalation in the South China Sea, and the Cold War. 
+              Our three committees cover a variety of topics, including the ethics of AI in business, the Equal Pay Act, and the Cold War. 
             </p>
             <p className="text-navy mb-4 leading-relaxed">
               Registration is now open, and each school is welcome to bring up to thirty delegates, so please reserve your students' spots here. We encourage you all to reach out to your chairs with any questions or concerns, and we wish everyone an amazing conference. Good luck!
@@ -180,7 +171,7 @@ function HomePage({ setCurrentPage }) {
                   {comms.map((committee, idx) => (
                     <button
                       key={idx}
-                      onClick={() => setShowPopup(true)}
+                      onClick={() => handleCommitteeClick(committee)}
                       className="w-full bg-blue-50 hover:bg-blue-100 rounded-lg overflow-hidden transition-all hover:shadow-lg text-left"
                     >
                       <img 
@@ -206,28 +197,73 @@ function HomePage({ setCurrentPage }) {
         </div>
       </section>
 
-      {/* Popup Modal */}
-      {showPopup && (
+      {/* Popup Modal with PDF */}
+      {showPopup && selectedCommittee && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4"
-          onClick={() => setShowPopup(false)}
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+          onClick={() => {
+            setShowPopup(false)
+            setSelectedCommittee(null)
+          }}
         >
           <div 
-            className="bg-white rounded-xl shadow-2xl p-8 max-w-md w-full"
+            className="bg-white rounded-xl shadow-2xl w-full max-w-5xl h-[95vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            <h3 className="text-2xl font-bold text-navy mb-4 text-center">
-              Coming Soon!
-            </h3>
-            <p className="text-navy text-center mb-6">
-              Check back on March 1st for a more detailed description!
-            </p>
-            <button
-              onClick={() => setShowPopup(false)}
-              className="w-full bg-navy text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition"
-            >
-              Close
-            </button>
+            {/* Header */}
+            <div className="p-6 border-b border-gray-200 flex justify-between items-start flex-shrink-0">
+              <div>
+                <h3 className="text-2xl font-bold text-navy mb-2">
+                  {selectedCommittee.name}
+                </h3>
+                <p className="text-navy">
+                  <span className="font-semibold">Topic:</span> {selectedCommittee.topic}
+                </p>
+              </div>
+              <button
+                onClick={() => {
+                  setShowPopup(false)
+                  setSelectedCommittee(null)
+                }}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* PDF Viewer */}
+            <div className="flex-grow overflow-hidden min-h-0">
+              <iframe
+                src={selectedCommittee.guide}
+                className="w-full h-full"
+                title="Background Guide"
+              />
+            </div>
+
+            {/* Footer with Download Button */}
+            <div className="p-6 border-t border-gray-200 flex justify-between items-center flex-shrink-0">
+              <a
+                href={selectedCommittee.guide}
+                download
+                className="bg-navy text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition inline-flex items-center"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download Background Guide
+              </a>
+              <button
+                onClick={() => {
+                  setShowPopup(false)
+                  setSelectedCommittee(null)
+                }}
+                className="text-gray-600 hover:text-gray-800 font-semibold"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       )}
