@@ -48,7 +48,7 @@ function HomePage({ setCurrentPage }) {
     "General Assembly": [
       { 
         name: "Economic and Financial Affairs Council (ECOFIN)", 
-        chairs: "Stephen Pinder, Felipe Quintero Ochoa, Adrian Lallemand, and Bennett Klurfeld",
+        chairs: "Stephen Pinder and Felipe Quintero Ochoa",
         topic: "Ethics of Artificial Intelligence in Business",
         banner: "/media/ECOFIN.jpeg",
         guide: "/media/background_guides/ECOFIN_background_guide.pdf"
@@ -57,7 +57,7 @@ function HomePage({ setCurrentPage }) {
     "Specialized Committee": [
       { 
         name: "United Nations Entity for Gender Equality and the Empowerment of Women (UN Women)", 
-        chairs: "Karter de la Fuente, Val He, Ellora Shah, and Chase Tucker",
+        chairs: "Karter de la Fuente, Val He, and Ellora Shah",
         topic: "The Equal Pay Act",
         banner: "/media/UNWOMEN.jpeg",
         guide: "/media/background_guides/UNWomen_background_guide.pdf"
@@ -66,7 +66,7 @@ function HomePage({ setCurrentPage }) {
     "Crisis Committee": [
       { 
         name: "House Un-American Activities Committee (HUAC)", 
-        chairs: "Xavier Reilly, Alison Gipstein, Emma Hepworth, and Grant Dinger",
+        chairs: "Xavier Reilly and Alison Gipstein",
         topic: "The Cold War & McCarthyism",
         banner: "/media/HUAC.jpeg",
         guide: "/media/background_guides/HUAC_background_guide.pdf"

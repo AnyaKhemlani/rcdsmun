@@ -24,11 +24,11 @@ function ConferencePage() {
           <div className="bg-white rounded-xl shadow-lg p-8">
             <h2 className="text-3xl font-bold text-navy mb-4">Schedule</h2>
             <div className="text-navy space-y-3">
-              <p><strong>Registration:</strong> 8:00am - 8:45am</p>
+              <p><strong>Registration:</strong> 8:15am - 8:45am</p>
               <p><strong>Opening Ceremonies:</strong> 9:00am - 9:45am</p>
-              <p><strong>Committee Session I:</strong> 10:00am - 12:00pm</p>
-              <p><strong>Lunch (staggered):</strong> 12:00pm - 2:00pm</p>
-              <p><strong>Committee Session II:</strong> 2:00pm - 4:00pm</p>
+              <p><strong>Committee Session I:</strong> 10:00am - 12:30pm</p>
+              <p><strong>Lunch:</strong> 12:30pm - 1:30pm</p>
+              <p><strong>Committee Session II:</strong> 1:30pm - 4:00pm</p>
               <p><strong>Committee Session III:</strong> 4:00pm - 5:00pm</p>
               <p><strong>Closing Ceremonies:</strong> 5:15pm - 5:45pm</p>
             </div>
