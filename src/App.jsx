@@ -6,7 +6,7 @@ import AboutPage from './components/AboutPage'
 import ConferencePage from './components/ConferencePage'
 // import RegistrationPage from './components/RegistrationPage'
 import CommitteePage from './components/CommitteePage'
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -31,6 +31,7 @@ function App() {
       </div>
 
       <Footer setCurrentPage={setCurrentPage} />
+      <Analytics />
     </div>
   )
 }
