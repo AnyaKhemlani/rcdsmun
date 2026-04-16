@@ -6,6 +6,7 @@ import AboutPage from './components/AboutPage'
 import ConferencePage from './components/ConferencePage'
 // import RegistrationPage from './components/RegistrationPage'
 import CommitteePage from './components/CommitteePage'
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
