@@ -6,16 +6,18 @@ function HomePage({ setCurrentPage }) {
   const [currentTopicIndex, setCurrentTopicIndex] = useState(0)
   const [displayedText, setDisplayedText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
-
+  
   const topics = [
-    "Ethics of Artificial Intelligence in Business",
-    // "Counterterrorism in Central America",
-    // "Coral Bleaching in the Great Barrier Reef",
-    "The Equal Pay Act",
-    // "Tiananmen Square ",
-    "The Cold War & McCarthyism"
+    "Zara Khemlani (Co-President)",
+    "Kevin Neilinger (Co-President)",
+    "Lillian Pereira (Vice President)",
+    "Xavier Reilly (Co-Treasurer)",
+    "Harold Eylward (Co-Treasurer)",
+    "Alicia Levy (Social Media Manager)",
+    "Helena Pierry (Website Manager)",
+    "Olivia Pierry (Middle School Outreach Coordinator)"
   ]
-
+  
   useEffect(() => {
     const currentTopic = topics[currentTopicIndex]
     const typingSpeed = isDeleting ? 50 : 100
@@ -96,7 +98,7 @@ function HomePage({ setCurrentPage }) {
 
         {/* White overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-white opacity-40"></div>
-
+        
         {/* Club Crest - moved up */}
         <div className="relative z-10 flex flex-col items-center -mt-20">
           <img 
@@ -108,7 +110,7 @@ function HomePage({ setCurrentPage }) {
           {/* Typewriter Text */}
           <div className="mt-8 text-center px-4">
             <h2 className="text-2xl md:text-4xl font-bold text-navy">
-              Investigating: <span className="text-navy">{displayedText}</span>
+              Introducing: <span className="text-navy">{displayedText}</span>
               <span className="animate-pulse">|</span>
             </h2>
           </div>
